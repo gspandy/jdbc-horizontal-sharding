@@ -2,7 +2,7 @@ SET NAMES utf8;
 SET FOREIGN_KEY_CHECKS = 0;
 
 CREATE DATABASE IF NOT EXISTS `hor-shard-center` default charset utf8 COLLATE utf8_general_ci;
-using `hor-shard-center`;
+USE `hor-shard-center`;
 
 DROP TABLE IF EXISTS `datasource_sharding`;
 CREATE TABLE `datasource_sharding`  (
@@ -31,7 +31,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
 
 CREATE DATABASE IF NOT EXISTS `hor-shard-ds1` default charset utf8 COLLATE utf8_general_ci;
-using `hor-shard-ds1`;
+USE `hor-shard-ds1`;
 
 CREATE TABLE `order_1` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -51,7 +51,7 @@ CREATE TABLE `order_desc_1` (
 
 
 CREATE DATABASE IF NOT EXISTS `hor-shard-ds2` default charset utf8 COLLATE utf8_general_ci;
-using `hor-shard-ds2`;
+USE `hor-shard-ds2`;
 
 CREATE TABLE `order_2` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
