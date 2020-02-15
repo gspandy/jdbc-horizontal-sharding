@@ -1,0 +1,43 @@
+datasource:
+  type: com.zaxxer.hikari.HikariDataSource
+  db:
+    center:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/hor-shard-center?autoReconnect=true&rewriteBatchedStatements=true&useSSL=true
+      username: root
+      password: root
+      pool-name: center-pool
+      maximum-pool-size: 200
+      minimum-idle: 1
+    ds1-master:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/hor-shard-ds1?autoReconnect=true&rewriteBatchedStatements=true&useSSL=true
+      username: root
+      password: root
+      pool-name: ds1-master-pool
+      maximum-pool-size: 200
+      minimum-idle: 1
+    ds1-slave:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/hor-shard-ds1?autoReconnect=true&rewriteBatchedStatements=true&useSSL=true
+      username: root
+      password: root
+      pool-name: ds1-slave-pool
+      maximum-pool-size: 200
+      minimum-idle: 1
+    ds2-master:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/hor-shard-ds2?autoReconnect=true&rewriteBatchedStatements=true&useSSL=true
+      username: root
+      password: root
+      pool-name: ds2-master-pool
+      maximum-pool-size: 200
+      minimum-idle: 1
+    ds2-slave:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/hor-shard-ds2?autoReconnect=true&rewriteBatchedStatements=true&useSSL=true
+      username: root
+      password: root
+      pool-name: ds2-slave-pool
+      maximum-pool-size: 200
+      minimum-idle: 1
