@@ -19,7 +19,7 @@ public class DatasourceShardingDaoImpl implements DatasourceShardingDao {
     @Override
     public List<DatasourceSharding> listAllEnabled() {
         String sql = "SELECT * FROM " + buildTable() + " WHERE enable = 1";
-        List<Map<String, Object>> list = Db.select(sql, null, ShardingContext.CENTER);
+        List<Map<String, Object>> list = Db.query(sql, null, ShardingContext.CENTER);
 
         return DbAssist.convert(list, DatasourceSharding.class);
     }

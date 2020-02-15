@@ -2,13 +2,10 @@ package jit.wxs.jdbc.horizontal.sharding.datasource;
 
 import jit.wxs.jdbc.horizontal.sharding.constant.Symbol;
 import jit.wxs.jdbc.horizontal.sharding.util.DateUtils;
-import jit.wxs.jdbc.horizontal.sharding.util.ThreadUtils;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
-import javax.sql.DataSource;
 import java.sql.*;
 import java.util.Collections;
 import java.util.List;
@@ -54,12 +51,8 @@ public class Db {
             if(StringUtils.isNotEmpty(message) && message.contains("Duplicate entry")) {
                 log.error("Duplicate entry, error sql: {}, params: {}", sql, DbAssist.buildParams(params));
             } else {
-                List<String> tableName = DbAssist.getTableName(sql);
-                String tb = CollectionUtils.isEmpty(tableName) ? "NULL table name" : tableName.toString();
-
-                log.error("Db#update execute error, server: {}, sql: {}, params:{}, tableName: {}, trace: {}",
-                        Server.getServerName(context.getType(), context.getModulo()), sql, DbAssist.buildParams(params),
-                        tb, ThreadUtils.trace());
+                log.error("Db#update execute error, server: {}, sql: {}, params:{}",
+                        Server.getServerName(context.getType(), context.getModulo()), sql, DbAssist.buildParams(params), e);
             }
             return -1;
         } finally {
@@ -128,7 +121,7 @@ public class Db {
             return batchInsert(sql, params, context, false);
         } catch (Exception e) {
             String paramStr = params.stream().map(DbAssist::buildParams).collect(Collectors.joining(Symbol.COMMA));
-            log.error("batchInsert error sql: {}, param: {}, trace: {}", sql, paramStr, ThreadUtils.trace());
+            log.error("batchInsert error sql: {}, param: {}", sql, paramStr, e);
             return null;
         }
     }
@@ -186,7 +179,7 @@ public class Db {
      * @author jitwxs
      * @date 2020/2/15 15:55
      */
-    public static List<Map<String, Object>> select(String sql, Object[] params, ShardingContext context) {
+    public static List<Map<String, Object>> query(String sql, Object[] params, ShardingContext context) {
         if(isIllegalSql(sql)) {
             return Collections.emptyList();
         }
@@ -211,16 +204,16 @@ public class Db {
 
             long endTime = DateUtils.now();
             if ((endTime - startTime) > 2000) {
-                log.warn("Db#select execute too long, server: {}, costTime:{}, connectTime:{}, sql: {}, params:{}",
+                log.warn("Db#query execute too long, server: {}, costTime:{}, connectTime:{}, sql: {}, params:{}",
                         Server.getServerName(context.getType(), context.getModulo()), endTime - startTime, connectTime,
                         sql, DbAssist.buildParams(params));
             }
 
             return DbAssist.getResultMap(resultSet);
 
-        } catch (Exception ex) {
-            log.error("Db#select error, tableName:{} sql:{}, server:{}, params:{}, trace:{}", DbAssist.getTableName(sql),
-                    sql, Server.getServerName(context.getType(), context.getModulo()), DbAssist.buildParams(params), ThreadUtils.trace());
+        } catch (Exception e) {
+            log.error("Db#query error, sql:{}, server:{}, params:{}", sql,
+                    Server.getServerName(context.getType(), context.getModulo()), DbAssist.buildParams(params), e);
 
             return Collections.emptyList();
         } finally {
@@ -235,7 +228,7 @@ public class Db {
      * @author jitwxs
      * @date 2020/2/15 15:55
      */
-    public static List<Map<String, Object>> selectTransaction(String sql, Object[] params, ShardingContext context) throws SQLException {
+    public static List<Map<String, Object>> queryTransaction(String sql, Object[] params, ShardingContext context) throws SQLException {
         if(isIllegalSql(sql)) {
             return Collections.emptyList();
         }
@@ -260,7 +253,7 @@ public class Db {
 
             long endTime = DateUtils.now();
             if ((endTime - startTime) > 2000) {
-                log.warn("Db#select_tx execute too long, server: {}, costTime:{}, connectTime:{}, sql: {}, params:{}",
+                log.warn("Db#queryTransaction execute too long, server: {}, costTime:{}, connectTime:{}, sql: {}, params:{}",
                         Server.getServerName(context.getType(), context.getModulo()), endTime - startTime, connectTime,
                         sql, DbAssist.buildParams(params));
             }
@@ -302,9 +295,8 @@ public class Db {
         ThreadLocal<Connection> threadLocal = server.getConnThreadLocal();
         Connection connection = threadLocal.get();
         if(connection == null || connection.isClosed()) {
-            log.error("Db#getConnTransaction connection is null or closed, Server is {}, trace: {}",
-                    server.getName(), ThreadUtils.trace());
-            throw new SQLException("getConn_tx connection is null or closed");
+            log.error("Db#getConnTransaction connection is null or closed, Server is {}", server.getName());
+            throw new SQLException("getConnTransaction connection is null or closed");
         }
 
         long costTime = DateUtils.now() - startTime;
@@ -347,8 +339,8 @@ public class Db {
             conn = getConnTransaction(context);
             conn.rollback();
             conn.setAutoCommit(true);
-        } catch (Exception ex) {
-            log.error("Db#rollbackTransaction error, trace:{}", ThreadUtils.trace());
+        } catch (Exception e) {
+            log.error("Db#rollbackTransaction error", e);
         } finally {
             releaseContext(context);
         }
@@ -367,7 +359,7 @@ public class Db {
             try {
                 statement.close();
             } catch (SQLException e) {
-                log.error("close preparedStatement error: {}", ThreadUtils.trace());
+                log.error("close preparedStatement error", e);
             }
         }
     }
@@ -376,8 +368,8 @@ public class Db {
         if (resultSet != null) {
             try {
                 resultSet.close();
-            } catch (SQLException ex) {
-                log.error("close resultSet error: {}", ThreadUtils.trace());
+            } catch (SQLException e) {
+                log.error("close resultSet error", e);
             }
         }
     }
@@ -390,8 +382,8 @@ public class Db {
                 if(!conn.isClosed()) {
                     conn.close();
                 }
-            } catch (SQLException ex) {
-                log.error("releaseContext error: {}", ThreadUtils.trace());
+            } catch (SQLException e) {
+                log.error("releaseContext error", e);
             }
         }
         threadLocal.set(null);

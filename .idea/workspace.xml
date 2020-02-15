@@ -2,28 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e184f8c0-46ef-4d37-844a-75093fa3d82f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Java/jdbc_demo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java/jdbc_demo/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java/jdbc_demo/src/main/resources/jdbc_demo.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java/jdbc_demo/src/test/java/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java/jdbc_demo/src/test/java/PrepareStatementTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/config/DataSourceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/config/ServerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/constant/Symbol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/dao/DatasourceShardingDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/dao/impl/DatasourceShardingDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/datasource/Db.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/datasource/DbAssist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/datasource/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/datasource/ShardingContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/entiy/DatasourceSharding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/util/DateUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/util/ThreadUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/jit/wxs/jdbc/horizontal/sharding/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/jit/wxs/jdbc/horizontal/sharding/TransactionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/dao/impl/DatasourceShardingDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/dao/impl/DatasourceShardingDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/datasource/Db.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/datasource/Db.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/datasource/DbAssist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/datasource/DbAssist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/util/ThreadUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jit/wxs/jdbc/horizontal/sharding/config/ServerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jit/wxs/jdbc/horizontal/sharding/config/ServerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jit/wxs/jdbc/horizontal/sharding/dao/impl/DatasourceShardingDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jit/wxs/jdbc/horizontal/sharding/dao/impl/DatasourceShardingDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jit/wxs/jdbc/horizontal/sharding/datasource/Db.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jit/wxs/jdbc/horizontal/sharding/datasource/Db.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jit/wxs/jdbc/horizontal/sharding/datasource/DbAssist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jit/wxs/jdbc/horizontal/sharding/datasource/DbAssist.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jit/wxs/jdbc/horizontal/sharding/datasource/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jit/wxs/jdbc/horizontal/sharding/datasource/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jit/wxs/jdbc/horizontal/sharding/util/ThreadUtils.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +36,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -78,10 +72,10 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager">
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TransactionTest.testRollback">
+    <configuration name="BatchInsertTest.testSpeed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jdbc-horizontal-sharding" />
       <extension name="coverage">
         <pattern>
@@ -89,14 +83,84 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="jit.wxs.jdbc.horizontal.sharding.Application" />
+      <option name="PACKAGE_NAME" value="jit.wxs.jdbc.horizontal.sharding" />
+      <option name="MAIN_CLASS_NAME" value="jit.wxs.jdbc.horizontal.sharding.BatchInsertTest" />
+      <option name="METHOD_NAME" value="testSpeed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CrudTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc-horizontal-sharding" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jit.wxs.jdbc.horizontal.sharding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jit.wxs.jdbc.horizontal.sharding" />
+      <option name="MAIN_CLASS_NAME" value="jit.wxs.jdbc.horizontal.sharding.CrudTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShardingTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc-horizontal-sharding" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jit.wxs.jdbc.horizontal.sharding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jit.wxs.jdbc.horizontal.sharding" />
+      <option name="MAIN_CLASS_NAME" value="jit.wxs.jdbc.horizontal.sharding.ShardingTest" />
+      <option name="METHOD_NAME" value="testInsert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionTest.testCommit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc-horizontal-sharding" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jit.wxs.jdbc.horizontal.sharding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jit.wxs.jdbc.horizontal.sharding" />
+      <option name="MAIN_CLASS_NAME" value="jit.wxs.jdbc.horizontal.sharding.TransactionTest" />
+      <option name="METHOD_NAME" value="testCommit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionTest.testRollback" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc-horizontal-sharding" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jit.wxs.jdbc.horizontal.sharding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jit.wxs.jdbc.horizontal.sharding" />
+      <option name="MAIN_CLASS_NAME" value="jit.wxs.jdbc.horizontal.sharding.TransactionTest" />
+      <option name="METHOD_NAME" value="testRollback" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.TransactionTest.testRollback" />
+        <item itemvalue="JUnit.TransactionTest.testCommit" />
+        <item itemvalue="JUnit.ShardingTest.testInsert" />
+        <item itemvalue="JUnit.BatchInsertTest.testSpeed" />
+        <item itemvalue="JUnit.CrudTest" />
       </list>
     </recent_temporary>
   </component>
@@ -112,11 +176,30 @@
       <updated>1581743529146</updated>
       <workItem from="1581743531161" duration="253000" />
       <workItem from="1581743790554" duration="15298000" />
+      <workItem from="1581765623521" duration="1594000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581754980913">
@@ -127,66 +210,74 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1003" y="502" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1581743847725" />
-    <state x="1085" y="409" key="#com.intellij.ide.util.MemberChooser" timestamp="1581756387977">
+    <state x="1085" y="409" key="#com.intellij.ide.util.MemberChooser" timestamp="1581766441542">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1085" y="409" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1581756387977" />
-    <state width="456" height="466" key="DebuggerActiveHint" timestamp="1581757557069">
+    <state x="1085" y="409" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1581766441542" />
+    <state x="1010" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581766687537">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="456" height="466" key="DebuggerActiveHint/0.0.2560.1400@0.0.2560.1400" timestamp="1581757557069" />
+    <state x="1010" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1581766687537" />
+    <state width="456" height="466" key="DebuggerActiveHint" timestamp="1581767116021">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="456" height="466" key="DebuggerActiveHint/0.0.2560.1400@0.0.2560.1400" timestamp="1581767116021" />
     <state x="1060" y="454" key="FileChooserDialogImpl" timestamp="1581743576720">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1060" y="454" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1581743576720" />
-    <state width="2515" height="614" key="GridCell.Tab.0.bottom" timestamp="1581759102276">
+    <state width="2515" height="493" key="GridCell.Tab.0.bottom" timestamp="1581767233117">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2515" height="614" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1581759102276" />
-    <state width="2515" height="614" key="GridCell.Tab.0.center" timestamp="1581759102276">
+    <state width="2515" height="493" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1581767233117" />
+    <state width="2515" height="493" key="GridCell.Tab.0.center" timestamp="1581767233117">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2515" height="614" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1581759102276" />
-    <state width="2515" height="614" key="GridCell.Tab.0.left" timestamp="1581759102276">
+    <state width="2515" height="493" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1581767233117" />
+    <state width="2515" height="493" key="GridCell.Tab.0.left" timestamp="1581767233117">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2515" height="614" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1581759102276" />
-    <state width="2515" height="614" key="GridCell.Tab.0.right" timestamp="1581759102276">
+    <state width="2515" height="493" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1581767233117" />
+    <state width="2515" height="493" key="GridCell.Tab.0.right" timestamp="1581767233117">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2515" height="614" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1581759102276" />
-    <state width="2515" height="614" key="GridCell.Tab.1.bottom" timestamp="1581759102276">
+    <state width="2515" height="493" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1581767233117" />
+    <state width="2515" height="616" key="GridCell.Tab.1.bottom" timestamp="1581767159303">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2515" height="614" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1581759102276" />
-    <state width="2515" height="614" key="GridCell.Tab.1.center" timestamp="1581759102276">
+    <state width="2515" height="616" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1581767159303" />
+    <state width="2515" height="616" key="GridCell.Tab.1.center" timestamp="1581767159303">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2515" height="614" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1581759102276" />
-    <state width="2515" height="614" key="GridCell.Tab.1.left" timestamp="1581759102276">
+    <state width="2515" height="616" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1581767159303" />
+    <state width="2515" height="616" key="GridCell.Tab.1.left" timestamp="1581767159303">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2515" height="614" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1581759102276" />
-    <state width="2515" height="614" key="GridCell.Tab.1.right" timestamp="1581759102276">
+    <state width="2515" height="616" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1581767159303" />
+    <state width="2515" height="616" key="GridCell.Tab.1.right" timestamp="1581767159303">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2515" height="614" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1581759102276" />
-    <state x="781" y="341" key="SettingsEditor" timestamp="1581743580446">
+    <state width="2515" height="616" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1581767159303" />
+    <state x="781" y="341" key="SettingsEditor" timestamp="1581765629171">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="781" y="341" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1581743580446" />
+    <state x="781" y="341" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1581765629171" />
     <state x="1010" y="463" key="extract.method.dialog" timestamp="1581750536707">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1010" y="463" key="extract.method.dialog/0.0.2560.1400@0.0.2560.1400" timestamp="1581750536707" />
-    <state x="954" y="429" width="795" height="614" key="find.popup" timestamp="1581755591755">
+    <state x="954" y="429" width="795" height="614" key="find.popup" timestamp="1581767061975">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="954" y="429" width="795" height="614" key="find.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1581755591755" />
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1581757512968">
+    <state x="954" y="429" width="795" height="614" key="find.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1581767061975" />
+    <state x="936" y="330" key="run.anything.popup" timestamp="1581763859231">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1581757512968" />
+    <state x="936" y="330" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1581763859231" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1581763114013">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1581763114013" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -200,6 +291,16 @@
           <url>jar://D:/apache-maven-3.6.3/repository/com/zaxxer/HikariCP/3.4.1/HikariCP-3.4.1.jar!/com/zaxxer/hikari/HikariDataSource.class</url>
           <line>74</line>
           <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/datasource/Db.java</url>
+          <line>296</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/jit/wxs/jdbc/horizontal/sharding/datasource/Db.java</url>
+          <line>297</line>
+          <option name="timeStamp" value="59" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

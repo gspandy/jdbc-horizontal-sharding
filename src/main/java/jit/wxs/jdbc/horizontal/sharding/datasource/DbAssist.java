@@ -35,90 +35,11 @@ public class DbAssist {
         return false;
     }
 
-    public static List<String> getTableName(String sql) {
-        if(StringUtils.isEmpty(sql)) {
-            return Collections.emptyList();
-        }
-
-        List<String> tableList = new ArrayList<>();
-        String sqlType = sql.trim().substring(0, sql.trim().indexOf(" "));
-
-
-        if ("select".equals(sqlType.toLowerCase()) || "delete".equals(sqlType.toLowerCase())) {
-            tableList.addAll(getSelectOrDelete(sql));
-        } else if ("insert".equals(sqlType.toLowerCase()) || "replace".equals(sqlType.toLowerCase())) {
-            String[] temp = sql.trim().split("into");
-            if (ArrayUtils.isNotEmpty(temp)) {
-                String tmp = temp[1].trim();
-                int length;
-                length = tmp.indexOf("values");
-                if (length == -1) {
-                    length = tmp.indexOf("VALUES");
-                    if (length == -1) {
-                        length = tmp.indexOf("value");
-                        if (length == -1) {
-                            length = tmp.indexOf("VALUE");
-                            if (length == -1){
-                                length = tmp.indexOf("set");
-                                if (length == -1) {
-                                    length = tmp.indexOf("SET");
-                                }
-                                if(length == -1) {
-                                    length = tmp.indexOf("select");
-                                }
-                                if (length == -1) {
-                                    length = tmp.indexOf("SELECT");
-                                }
-                            }
-                        }
-                    }
-                }
-                if (length <= 0) {
-                    return null;
-                }
-
-                tmp = tmp.substring(0, length);
-                tmp = splitStr(tmp, '(')[0].trim();
-                if (tmp.length() > 0) {
-                    tableList.add(tmp);
-                }
-            }
-        } else if ("update".equals(sqlType.toLowerCase())) {
-            String strSql = sql.trim();
-            String[] temp = sql.trim().split(" ");
-            int count = 0;
-            for (String s : temp) {
-                String tmp = s.trim();
-                if (tmp.length() > 0 && !"from".equals(tmp.toLowerCase())) {
-                    count++;
-                }
-                if (count == 2) {
-                    tableList.add(tmp);
-                    strSql = sql.substring(sql.indexOf(tmp) + tmp.length());
-                    break;
-                }
-            }
-            if (strSql.length() > 0) {
-                List<String> tableName = getSelectOrDelete(strSql);
-                if (tableName.size() > 0) {
-                    tableList.addAll(tableName);
-                }
-            }
-        } else {
-            List<String> tableName = getSelectOrDelete(sql);
-            if (tableName.size() > 0) {
-                tableList.addAll(tableName);
-            }
-        }
-
-        return tableList;
-    }
-
     public static String buildParams(Object[] params) {
         if(ArrayUtils.isEmpty(params)) {
             return StringUtils.EMPTY;
         } else {
-            StringBuilder sb =  new StringBuilder("512");
+            StringBuilder sb =  new StringBuilder(512);
             for (Object param : params) {
                 sb.append(param).append(", ");
             }
