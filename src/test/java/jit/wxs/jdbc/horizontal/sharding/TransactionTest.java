@@ -30,6 +30,11 @@ public class TransactionTest extends BaseTest {
     @Autowired
     private OrderDescDao orderDescDao;
 
+    /**
+     * 事务提交
+     * @author jitwxs
+     * @date 2020/2/16 17:42
+     */
     @Test
     public void testCommit() {
         User user = User.builder().username(RandomStringUtils.randomAscii(4)).phone(RandomStringUtils.randomNumeric(5)).build();
@@ -66,6 +71,11 @@ public class TransactionTest extends BaseTest {
         Assert.assertEquals(userId, orderDesc.getUserId());
     }
 
+    /**
+     * 事务回滚
+     * @author jitwxs
+     * @date 2020/2/16 17:42
+     */
     @Test
     public void testRollback() {
         User user = User.builder().username(RandomStringUtils.randomAscii(4)).phone(RandomStringUtils.randomNumeric(5)).build();

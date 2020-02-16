@@ -32,7 +32,7 @@ public class BatchInsertTest extends BaseTest {
     }
 
     /**
-     * 1w条数据插入耗时PK，jdbc-url需开启：rewriteBatchedStatements=true
+     * 1k条数据插入耗时PK，jdbc-url需开启：rewriteBatchedStatements=true
      * Db#batchInsert VS Db#update + 拼串
      * @author jitwxs
      * @date 2020/2/15 18:33

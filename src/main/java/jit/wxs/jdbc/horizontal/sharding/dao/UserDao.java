@@ -2,6 +2,7 @@ package jit.wxs.jdbc.horizontal.sharding.dao;
 
 import jit.wxs.jdbc.horizontal.sharding.entiy.User;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface UserDao {
@@ -21,6 +22,8 @@ public interface UserDao {
     long batchInsert2(List<User> userList);
 
     long updatePhone(long userId, String phone);
+
+    long updatePhoneTransaction(long userId, String phone) throws SQLException;
 
     List<User> listAll();
 

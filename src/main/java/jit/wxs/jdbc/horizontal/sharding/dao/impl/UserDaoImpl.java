@@ -8,6 +8,7 @@ import jit.wxs.jdbc.horizontal.sharding.entiy.User;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.stereotype.Repository;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -56,6 +57,12 @@ public class UserDaoImpl implements UserDao {
     public long updatePhone(long userId, String phone) {
         String sql = "UPDATE " + buildTable() + " SET phone = ? WHERE id = ?";
         return Db.update(sql, new Object[]{phone, userId}, ShardingContext.CENTER);
+    }
+
+    @Override
+    public long updatePhoneTransaction(long userId, String phone) throws SQLException {
+        String sql = "UPDATE " + buildTable() + " SET phone = ? WHERE id = ?";
+        return Db.updateTransaction(sql, new Object[]{phone, userId}, ShardingContext.CENTER);
     }
 
     @Override

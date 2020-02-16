@@ -78,8 +78,8 @@ modulo = userId % (moduloCount) + 1
 
 | ClassName        | Description  |
 | ---------------- | ------------ |
-| CrudTest         | 单表增删改查 |
-| ShardingTest     | 分片测试     |
-| BatchInsertTest  | 批量插入测试 |
-| TransractionTest | 事务测试     |
-
+| CrudTest         | 单表增删改查   |
+| ShardingTest     | 分片测试      |
+| BatchInsertTest  | 批量插入测试   |
+| TransactionTest  | 事务测试      |
+| DCSTransactionTest | 分布式事务测试 |

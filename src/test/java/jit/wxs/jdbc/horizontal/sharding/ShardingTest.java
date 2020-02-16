@@ -22,6 +22,11 @@ public class ShardingTest extends BaseTest {
     @Autowired
     private UserDao userDao;
 
+    /**
+     * 分库插入
+     * @author jitwxs
+     * @date 2020/2/16 17:42
+     */
     @Test
     public void testInsert() {
         User user = User.builder().username(RandomStringUtils.randomAscii(4)).phone(RandomStringUtils.randomNumeric(5)).build();

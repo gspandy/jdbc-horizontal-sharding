@@ -21,6 +21,11 @@ public class CrudTest extends BaseTest {
     @Autowired
     private UserDao userDao;
 
+    /**
+     * 插入操作
+     * @author jitwxs
+     * @date 2020/2/16 17:42
+     */
     @Before
     public void test1Insert() {
         String username = "zhangsan";
@@ -33,6 +38,11 @@ public class CrudTest extends BaseTest {
         Assert.assertEquals(username, user1.getUsername());
     }
 
+    /**
+     * 更新操作
+     * @author jitwxs
+     * @date 2020/2/16 17:43
+     */
     @Test
     public void test2Update() {
         List<User> users = userDao.listAll();
@@ -47,6 +57,11 @@ public class CrudTest extends BaseTest {
         Assert.assertEquals("119", user1.getPhone());
     }
 
+    /**
+     * 删除操作
+     * @author jitwxs
+     * @date 2020/2/16 17:43
+     */
     @After
     public void test3Remove() {
         userDao.removeAll();
