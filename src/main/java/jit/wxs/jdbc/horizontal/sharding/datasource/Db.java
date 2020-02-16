@@ -57,7 +57,7 @@ public class Db {
             return -1;
         } finally {
             closeStatement(statement);
-            releaseContext(context);
+            closeConn(context);
         }
     }
 
@@ -168,7 +168,7 @@ public class Db {
             closeResultSet(rs);
             closeStatement(statement);
             if (!isTx) {
-                releaseContext(context);
+                closeConn(context);
             }
         }
         return keys;
@@ -219,7 +219,7 @@ public class Db {
         } finally {
             closeResultSet(resultSet);
             closeStatement(statement);
-            releaseContext(context);
+            closeConn(context);
         }
     }
 
@@ -306,6 +306,11 @@ public class Db {
         return connection;
     }
 
+    /**
+     * 开启事务
+     * @author jitwxs
+     * @date 2020/2/17 0:14
+     */
     public static void beginTransaction(ShardingContext context) throws SQLException {
         long startTime = DateUtils.now();
         Connection conn = getConn(context);
@@ -319,6 +324,11 @@ public class Db {
         }
     }
 
+    /**
+     * 提交事务
+     * @author jitwxs
+     * @date 2020/2/17 0:14
+     */
     public static void commitTransaction(ShardingContext context) {
         Connection conn;
         try {
@@ -329,10 +339,15 @@ public class Db {
             log.error(ex.getMessage(), ex);
             throw new RuntimeException("Db#commitTransaction error " + ex.getMessage());
         } finally {
-            releaseContext(context);
+            closeConn(context);
         }
     }
 
+    /**
+     * 事务回滚
+     * @author jitwxs
+     * @date 2020/2/17 0:14
+     */
     public static void rollbackTransaction(ShardingContext context) {
         Connection conn;
         try {
@@ -342,7 +357,7 @@ public class Db {
         } catch (Exception e) {
             log.error("Db#rollbackTransaction error", e);
         } finally {
-            releaseContext(context);
+            closeConn(context);
         }
     }
 
@@ -374,7 +389,7 @@ public class Db {
         }
     }
 
-    private static void releaseContext(ShardingContext context) {
+    private static void closeConn(ShardingContext context) {
         ThreadLocal<Connection> threadLocal = getServer(context).getConnThreadLocal();
         Connection conn = threadLocal.get();
         if(conn != null) {
